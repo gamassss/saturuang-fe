@@ -29,8 +29,8 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
 
   return (
     <nav
-      className={`fixed inset-x-0 top-0 z-50 bg-primary py-4 px-4 md:px-20 lg:px-32 backdrop-blur-sm text-white ${
-        isOpen && "bg-black/80"
+      className={`fixed inset-x-0 top-0 z-50 max-h-16 border-b-white bg-primary py-4 px-4 md:px-20 lg:px-32 backdrop-blur-sm text-white ${
+        isOpen && "bg-primary/80"
       }`}
     >
       <nav className="mx-auto flex items-center justify-between">
