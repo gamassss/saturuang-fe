@@ -1,18 +1,8 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+// import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import "../globals.css";
 import Navbar from "@/components/organisms/Navbar";
-
-const geistSans = localFont({
-  src: "../fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "../fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "SatuRuang",
@@ -26,9 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-primary`}
-      >
+      <body className={`${GeistMono.className} antialiased bg-primary`}>
         <Navbar></Navbar>
         {children}
       </body>
